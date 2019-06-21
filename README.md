@@ -70,9 +70,9 @@ it('should return `help message` if user types `help`', () => {
 ```
 ## Advanced Usage ##
 
-`botExtender` - allows developers to extend the bot and add custom functions to the `bot`. This overrides functionality in [BotmockWorker.js](https://github.com/gratifychat/botkit-mock/blob/migrate_to_botkit_core/lib/BotmockWorker.js).
+`botExtender` - allows developers to extend the bot and add custom functions to the `bot`. This overrides functionality in [index.js](https://github.com/gratifychat/botkit-mock/blob/migrate_to_botkit_core/lib/BotmockWorker.js).
 
-To use this, define `botExtender` in your `beforeEach`. It accepts three parameters `(bot, botkit, config)`, which are passed in from [Botmock.js](https://github.com/gratifychat/botkit-mock/blob/migrate_to_botkit_core/lib/Botmock.js) and [BotmockWorker.js](https://github.com/gratifychat/botkit-mock/blob/migrate_to_botkit_core/lib/BotmockWorker.js). Pass `botExtender` to your `.spawn()` and you will have access to your custom functions in the `it`.
+To use this, define `botExtender` in your `beforeEach`. It accepts three parameters `(bot, botkit, config)`, which are passed in from [Botmock.js](https://github.com/gratifychat/botkit-mock/blob/migrate_to_botkit_core/lib/Botmock.js) and [index.js](https://github.com/gratifychat/botkit-mock/blob/migrate_to_botkit_core/lib/BotmockWorker.js). Pass `botExtender` to your `.spawn()` and you will have access to your custom functions in the `it`.
 
 ```javascript
 beforeEach(()=>{
@@ -109,7 +109,7 @@ To add functionality to `botkit-mock`, you can create platform-specific function
 
 - [botkit-starter-slack](examples/botkit-starter-slack) - tests for [botkit starter kit](https://github.com/howdyai/botkit-starter-slack) (files with name `*mochaSpec.js`)
 - [convo_bot](examples/convo_bot) - tests for simple bot convo  (files with name `*MochaSpec.js` or `*JasmineSpec.js`)
-- [api](./tests/updateApiResponseMochaSpec.js) - simple api calls and api response overrides
+- [api](tests/slack/updateApiResponsesSpec.js) - simple api calls and api response overrides
 
 
 Built by the team at https://www.gratify.chat.
